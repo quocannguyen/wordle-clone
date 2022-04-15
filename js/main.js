@@ -132,9 +132,9 @@ function shadeKeyBoard(letter, color) {
     for (const button of keyboardButtonTags) {
         if (button.textContent == letter) {
             let oldColor = button.style.backgroundColor
-            if (color == "green" ||
-                (color == "yellow" && oldColor == "gray")) {
-                button.style.backgroundColor = color
+            button.style.backgroundColor = color
+            if (oldColor == "green" || (oldColor == "yellow" && color == "gray")) {
+                button.style.backgroundColor = oldColor
             }
             break
         }
